@@ -28,14 +28,27 @@ Analisar o catálogo da Netflix explorando títulos, países, gêneros, elenco e
 
 ---
 
-## Carregamento no Power BI via MySQL
-1. No Power BI Desktop, fui em **Obter Dados → Banco de Dados → MySQL**.  
-2. Informei o **servidor**.  
-3. Selecionei o **banco de dados** que contém as tabelas.
-5. Na aba de Modelo, configurei os **relacionamentos** usando `show_id` para conectar a tabela fato às dimensões.  
-6. Após carregar e relacionar, criei **medidas DAX**, **slicers** e **visuais** para montar o dashboard.
+3. **Carregamento e modelagem no Power BI**
+   - Conexão direta ao banco MySQL com as tabelas preparadas.
+   - Criação de relacionamentos entre a tabela fato e dimensões.
+   - Construção de páginas interativas:
+     - **Países:** KPIs, top países, mapa coroplético, evolução temporal.
+     - **Filmes x Séries:** total de filmes e séries, top gêneros, evolução anual, detalhamento de título.
 
+---
 
-## Dashboard Power BI
-- **Página Países**: total de títulos, top países, mapa coroplético, evolução temporal.  
-- **Página Filmes x Séries**: total de filmes e séries, top gêneros, evolução anual, informações sobre título.  
+## Motivação das Escolhas
+
+- **Separação em tabelas dimensões:** evita duplicação e facilita filtros e análises dinâmicas.
+- **Explosão de colunas multivalor:** garante medidas corretas e filtragem por país e gênero.
+- **Modelo estrela:** clareza e eficiência em cálculos agregados no Power BI.
+- **Uso de Power BI com MySQL:** integração direta com o banco, garantindo dados atualizados e manutenção fácil.
+
+---
+
+## Conclusões da Análise
+
+- Identificação de **países com mais títulos** e análise temporal.
+- Visualização da **distribuição de filmes x séries** e padrões de lançamento ao longo do tempo.
+- Análise de Título permite ver elenco, data de entrada no catálogo, duração, tipo.
+- Dashboard interativo facilita a exploração de tendências e insights para decisões rápidas com base nos dados.
